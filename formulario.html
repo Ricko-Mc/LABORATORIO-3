@@ -73,7 +73,7 @@
                     return
                 }
 
-                const respuesta = await fetch("https://TU-ENDPOINT-AQUI.amazonaws.com / contacto", {
+                const respuesta = await fetch("https://01cz2eokod.execute-api.us-east-2.amazonaws.com/default/FormularioContacto", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data)
@@ -81,6 +81,7 @@
 
                 if (respuesta.ok) {
                     alert("Mensaje enviado con éxito");
+                    console.log(respuesta)
                     e.target.reset();
                 } else {
                     alert("Ocurrió un error al enviar el formulario");
